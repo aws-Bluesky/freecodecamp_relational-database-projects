@@ -1,1 +1,4 @@
-# freecodecamp_relational-database-projects
+# RELATIONAL DATABASE PROJECTS
+#### freecodecamp
+
+- Salon Appointment Scheduler
