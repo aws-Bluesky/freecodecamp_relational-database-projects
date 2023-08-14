@@ -54,6 +54,9 @@ if [[ -z $CUSTOMER_NAME ]]
 then
     echo -e "\nI don't have a record for that phone number, what's your name?"
     read CUSTOMER_NAME
+    
+    # insert into customers
+    INSERT_INTO_CUSTOMERS_RESULT=$($PSQL "INSERT INTO customers(phone, name) VALUES('$CUSTOMER_PHONE', '$CUSTOMER_NAME')")
 fi
 
 echo -e "\nWhat time would you like your $SERVICE_NAME, $CUSTOMER_NAME?"
@@ -61,3 +64,9 @@ read SERVICE_TIME
 
 echo -e "\nI have put you down for a $SERVICE_NAME at $SERVICE_TIME, $CUSTOMER_NAME."
 
+# insert into appointments
+# get customer id (to use for insert)
+CUSTOMER_ID=$($PSQL "SELECT customer_id FROM customers WHERE phone = '$CUSTOMER_PHONE'")
+
+INSERT_INTO_APPOINTMENTS_RESULT=$($PSQL "INSERT INTO appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME')")
+echo $INSERT_INTO_APPOINTMENTS_RESULT
