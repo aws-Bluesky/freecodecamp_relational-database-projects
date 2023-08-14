@@ -5,6 +5,7 @@
 3) perm
 4) style
 5) trim
+
 --------------FLOWCHART
 ---Notice WELCOME
 Welcome to My Salon, how can I help you?
@@ -23,7 +24,7 @@ What's your phone number?
 I don't have a record for that phone number, what's your name?
 
 ---Ask TIME
-What time would you like your color, <name>?
+What time would you like your <(services) name>, <name>?
 
 ---Notice SUCCESS
 I have put you down for a <(services) name> at <time>, <(customers) name>.
