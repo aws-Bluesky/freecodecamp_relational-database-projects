@@ -1,0 +1,29 @@
+--------------TABLE
+---services
+1) cut
+2) color
+3) perm
+4) style
+5) trim
+--------------FLOWCHART
+---Notice WELCOME
+Welcome to My Salon, how can I help you?
+
+---MENU
+>>> function take data from services table 
+>>> format: <service_id>) <name>
+
+---Notice INVALID
+I could not find that service. What would you like today?
+
+---Ask PHONE NUMBER
+What's your phone number?
+
+---Ask NAME
+I don't have a record for that phone number, what's your name?
+
+---Ask TIME
+What time would you like your color, <name>?
+
+---Notice SUCCESS
+I have put you down for a <(services) name> at <time>, <(customers) name>.
